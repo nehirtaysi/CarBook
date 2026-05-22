@@ -1,0 +1,11 @@
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\bin\Debug\net8.0\UdemyCarBook.Dto.deps.json
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\bin\Debug\net8.0\UdemyCarBook.Dto.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\bin\Debug\net8.0\UdemyCarBook.Dto.pdb
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\obj\Debug\net8.0\UdemyCarBook.Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\obj\Debug\net8.0\UdemyCarBook.Dto.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\obj\Debug\net8.0\UdemyCarBook.Dto.AssemblyInfo.cs
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\obj\Debug\net8.0\UdemyCarBook.Dto.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\obj\Debug\net8.0\UdemyCarBook.Dto.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\obj\Debug\net8.0\refint\UdemyCarBook.Dto.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\obj\Debug\net8.0\UdemyCarBook.Dto.pdb
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontends\UdemyCarBook.Dto\obj\Debug\net8.0\ref\UdemyCarBook.Dto.dll

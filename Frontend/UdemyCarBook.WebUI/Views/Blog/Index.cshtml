@@ -1,0 +1,36 @@
+﻿@model List<ResultAllBlogsWithAuthorDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-12 text-center d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end mb-md-5" style="width: 100%;">
+                        <a href="/Blog/BlogDetail/@item.BlogID" class="block-20 img"
+                           style="background-image: url('@item.CoverImageUrl'); border-radius: 0px !important;">
+                        </a>
+
+                        <div class="text px-md-5 pt-4">
+                            <div class="meta mb-3">
+                                <div><a href="#" style="color: #6b8e23 !important;">@item.CreatedDate.ToShortDateString()</a></div>
+                                <div><a href="#" style="color: #999;">@item.AuthorName</a></div>
+                                
+                            </div>
+
+                            <h3 class="heading mt-2"><a href="/Blog/BlogDetail/@item.BlogID" style="color: #000; font-weight: bold;">@item.Title</a></h3>
+
+                            <p style="color: #666;">@item.Description</p>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

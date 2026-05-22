@@ -1,0 +1,110 @@
+﻿@model List<ResultTestimonialDto>
+
+<section class="ftco-section testimony-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading" style="color: #6b8e23 !important;">Bizim İçin Ne Dediler</span>
+                <h2 class="mb-3">Mutlu Müşteriler</h2>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel ftco-owl">
+                    @foreach (var item in Model)
+                    {
+                        <div class="item">
+                            <div class="testimony-wrap text-center py-4 pb-5" style="border-radius: 0px !important; background: #fff; box-shadow: 0px 5px 20px -10px rgba(0,0,0,0.1); border: none !important;">
+                                <div class="user-img mb-2" style="background-image: url(@item.ImageUrl); border-radius: 0px !important; width: 100px; height: 100px; margin: 0 auto; border: 3px solid #4a5d23;">
+                                </div>
+                                <div class="text pt-4">
+                                    <p class="mb-4" style="color: #666; font-style: italic;">"@item.Comment"</p>
+                                    <p class="name" style="color: #4a5d23 !important; font-weight: bold; margin-bottom: 0;">@item.Name</p>
+                                    <span class="position" style="color: #6b8e23 !important; font-size: 13px; font-weight: 600;">@item.Title</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 text-center ftco-animate">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="p-3 shadow-sm bg-white" style="border: 1px dashed #6b8e23; border-radius: 8px;">
+                        <h5 style="color: #4a5d23; font-weight: 700; font-size: 17px; margin-bottom: 5px;">Sizin Deneyiminiz Bizim İçin Değerli</h5>
+                        <p class="text-muted mb-3" style="font-size: 13px;">Görüşlerinizi paylaşarak CarBook ailesine destek olabilirsiniz.</p>
+
+                        <button type="button" class="btn py-2 px-4" data-toggle="modal" data-target="#addCommentModal"
+                                style="background-color: #6b8e23 !important; color: white !important; font-weight: bold; border-radius: 0px !important; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; border:none; cursor:pointer;">
+                            <i class="fa fa-pencil mr-2"></i> Yorum Yazın
+                        </button>
+                    </div>
+                }
+                else
+                {
+                    <div class="p-2 bg-white shadow-sm" style="border-radius: 5px; display: inline-block; padding: 10px 30px !important;">
+                        <p class="mb-0 text-muted" style="font-size: 13px;">
+                            <i class="fa fa-lock mr-2"></i> Yorum yapmak için lütfen <a href="/Login/Index/" style="color: #6b8e23; font-weight: bold;">Giriş Yapın</a>.
+                        </p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="addCommentModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="border-radius: 0px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <div class="modal-header" style="background-color: #4a5d23; color: white; border-radius: 0px;">
+                <h5 class="modal-title" style="color: white; font-weight: bold; font-size: 16px;">Deneyiminizi Paylaşın</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 1;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="/Testimonial/AddComment" method="post" enctype="multipart/form-data">
+                <div class="modal-body p-4" style="background: #fdfdfd;">
+                    <div class="form-group mb-3 text-left">
+                        <label style="font-size: 11px; font-weight: bold; color: #6b8e23; text-transform: uppercase;">Adınız Soyadınız</label>
+                        <input type="text" name="Name" class="form-control" placeholder="Örn: Nehir Tayşi" required
+                               style="border-radius: 0px; font-size: 14px; height: 45px; border: 1px solid #ddd; padding-left: 15px;">
+                    </div>
+
+                    <div class="form-group mb-3 text-left">
+                        <label style="font-size: 11px; font-weight: bold; color: #6b8e23; text-transform: uppercase;">Mesleğiniz</label>
+                        <input type="text" name="Title" class="form-control" placeholder="Örn: Yazılım Mühendisi" required
+                               style="border-radius: 0px; font-size: 14px; height: 45px; border: 1px solid #ddd; padding-left: 15px;">
+                    </div>
+
+                    <div class="form-group mb-3 text-left">
+                        <label style="font-size: 11px; font-weight: bold; color: #6b8e23; text-transform: uppercase;">Profil Fotoğrafınız</label>
+                        <input type="file" name="ImageFile" class="form-control" accept="image/*" style="border-radius: 0px; font-size: 14px; padding: 10px; height: auto;">
+                        <small class="text-muted" style="font-size: 11px;">Lütfen kare boyutlu bir fotoğraf seçiniz.</small>
+                    </div>
+
+                    <div class="form-group mb-0 text-left">
+                        <label style="font-size: 11px; font-weight: bold; color: #6b8e23; text-transform: uppercase;">Mesajınız</label>
+                        <textarea name="Comment" rows="4" class="form-control" required style="border-radius: 0px;"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: none; background: #fdfdfd; padding-bottom: 25px;">
+                    <button type="submit" class="btn btn-block py-3" style="background-color: #6b8e23 !important; color: white !important; border-radius: 0px; font-weight: bold; font-size: 13px;">YORUMU KAYDET VE GÖNDER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .testimony-section .owl-dots .owl-dot.active {
+        background: #6b8e23 !important;
+    }
+
+    .form-control:focus {
+        border-color: #6b8e23;
+        box-shadow: none;
+    }
+</style>

@@ -1,0 +1,39 @@
+﻿@model List<UdemyCarBook.Dto.AboutDtos.ResultAboutDto>
+
+@if (Model != null && Model.Count > 0)
+{
+    @foreach (var item in Model)
+    {
+        <div style="padding: 80px 0; background-color: white;">
+            <div class="container">
+                <div class="row no-gutters" style="display: flex; align-items: stretch; background-color: white;">
+
+                    <div class="col-md-6" style="background-image: url(@item.ImageUrl); background-size: cover; background-position: center; min-height: 500px; border-radius: 0px !important;">
+                    </div>
+
+                    <div class="col-md-6" style="background-color: #4a5d23 !important; padding: 50px; display: flex; flex-direction: column; justify-content: center; border-radius: 0px !important;">
+
+                        <h2 style="color: #ffffff !important; font-weight: bold; margin-bottom: 25px; font-size: 32px; border: none;">@item.Title</h2>
+
+                        <p style="color: #ffffff !important; line-height: 1.8; font-size: 16px; margin-bottom: 30px;">@item.Description</p>
+
+                        <div>
+                            <a href="/CarPricing/Index/"
+                               style="background-color: #6b8e23 !important; color: white !important; padding: 15px 35px; border-radius: 0px !important; border: none !important; transition: 0.3s; font-weight: bold; display: inline-block; text-decoration: none; text-transform: uppercase; font-size: 14px;"
+                               onmouseover="this.style.backgroundColor='#5a7a1c'"
+                               onmouseout="this.style.backgroundColor='#6b8e23'">
+                                Hemen Araç Kirala
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div style="padding: 40px; text-align: center;">
+        <p>Hakkımızda bilgisi yükleniyor...</p>
+    </div>
+}

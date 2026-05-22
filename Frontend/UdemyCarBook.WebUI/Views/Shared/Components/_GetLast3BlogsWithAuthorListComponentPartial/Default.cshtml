@@ -1,0 +1,44 @@
+﻿@model List<ResultLast3BlogsWithAuthors>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading" style="color: #6b8e23 !important;">Bloglar</span>
+                <h2 class="mb-2">Son Bloglar</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end" style="width: 100%;">
+                        <a href="/Blog/BlogDetail/@item.BlogID" class="block-20" style="background-image: url('@item.CoverImageUrl'); border-radius: 0px !important;">
+                        </a>
+                        <div class="text pt-4">
+                            <div class="meta mb-3">
+                                
+
+                                
+                            </div>
+
+                            <h3 class="heading mt-2">
+                                <a href="/Blog/BlogDetail/@item.BlogID" style="color: #4a5d23 !important;">@item.Title</a>
+                            </h3>
+
+                            <p>
+                                <a href="/Blog/BlogDetail/@item.BlogID"
+                                   class="btn py-2 px-3"
+                                   onmouseover="this.style.setProperty('background-color', '#6b8e23', 'important')"
+                                   onmouseout="this.style.setProperty('background-color', '#4a5d23', 'important')"
+                                   style="background-color: #4a5d23 !important; color: white !important; border-radius: 0px !important; border: none !important; transition: 0.3s; font-weight: bold; display: inline-block;">
+                                    Devamını Oku
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

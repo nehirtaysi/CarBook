@@ -1,0 +1,60 @@
+﻿@model List<FilterRentACarDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row">
+            @if (Model.Count == 0)
+            {
+                <div class="col-md-12 text-center">
+                    <div class="alert alert-info">Aradığınız kriterlere uygun müsait araç bulunamadı.</div>
+                </div>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="car-wrap ftco-animate" style="border-radius: 0px !important; background: #fff; margin-bottom: 30px; box-shadow: 0px 5px 15px rgba(0,0,0,0.05);">
+
+                        <div class="img d-flex align-items-end" style="background-image: url(@item.CoverImageUrl); border-radius: 0px !important; height: 250px;">
+                        </div>
+
+                        <div class="text" style="padding: 20px;">
+                            <h2 class="mb-0">
+                                <a href="#" style="text-decoration: none; color: #000; font-weight: 500; font-size: 22px;">@item.Model</a>
+                            </h2>
+
+                            <div class="d-flex mb-3 align-items-center">
+                                <span class="cat" style="text-transform: uppercase; color: #999;">@item.Brand</span>
+                                <p class="price ml-auto" style="color: #4a5d23 !important; font-weight: 300; margin-bottom: 0; font-size: 17px; letter-spacing: -0.5px;">
+                                    <span style="font-size: 13px; font-weight: 400;">₺</span>
+                                    @item.Amount.ToString("N0")
+                                    <span style="font-size: 11px; color: #ccc; font-weight: 300; letter-spacing: 0px;"> /Günlük</span>
+                                </p>
+                            </div>
+
+                            <div class="d-flex mb-3" style="font-size: 13px; color: #4a5d23;">
+                                <span class="mr-3">@item.Transmission</span>
+                                <span>@item.Fuel</span>
+                            </div>
+
+                            <p class="d-flex mb-0 d-block">
+                                <a href="/Reservation/Index/@item.CarID" class="btn py-3 mr-1"
+                                   style="background-color: #4a5d23 !important; color: white !important; border-radius: 0px !important; flex: 1; font-size: 13px; font-weight: bold; border: none; text-transform: uppercase;">
+                                    HEMEN KİRALA
+                                </a>
+                                <a href="/Car/CarDetail/@item.CarID" class="btn py-3 ml-1"
+                                   style="background-color: #6b8e23 !important; color: white !important; border-radius: 0px !important; flex: 1; font-size: 13px; font-weight: bold; border: none; text-transform: uppercase;">
+                                    DETAYLAR
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

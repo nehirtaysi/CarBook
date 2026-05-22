@@ -1,0 +1,103 @@
+﻿<header id="page-topbar">
+    <div class="navbar-header" style="background-color: #ffffff; border-bottom: 1px solid #f1f1f1;">
+
+        <div class="d-flex align-items-left">
+            <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+            <div class="dropdown d-none d-sm-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #4a5d23; font-weight: 600;">
+                    <i class="mdi mdi-plus-circle-outline mr-1"></i> Hızlı İşlemler
+                    <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                </button>
+                <div class="dropdown-menu shadow-sm" style="border-radius: 0; border: 1px solid #eee;">
+                    <a href="/Admin/AdminCar/CreateCar/" class="dropdown-item notify-item">Yeni Araç Girişi</a>
+                    <a href="/Admin/AdminBrand/CreateBrand/" class="dropdown-item notify-item">Yeni Marka Girişi</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="/" target="_blank" class="dropdown-item notify-item text-primary">
+                        <i class="mdi mdi-earth mr-1"></i> Siteye Git
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="dropdown d-none d-sm-inline-block ml-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-magnify" style="color: #666;"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0">
+                    <form class="p-3">
+                        <div class="form-group m-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Araç, marka veya müşteri ara..." style="border-radius: 0;">
+                                <div class="input-group-append">
+                                    <button class="btn" style="background-color: #6b8e23; color: white; border-radius: 0;" type="submit">Ara</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position: relative; background: transparent; border: none;">
+                    <i class="mdi mdi-bell-outline" style="color: #666; font-size: 22px;"></i>
+                    <span class="badge badge-pill"
+                          style="background-color: #6b8e23; color: white; position: absolute; top: 15px; right: 8px; font-size: 10px; padding: 2px 5px; border: 2px solid #fff;">0</span>
+                </button>
+            </div>
+            <div class="dropdown d-inline-block ml-2">
+                <button type="button" class="btn header-item waves-effect d-flex align-items-center" id="page-header-user-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: transparent; border: none;">
+
+                    <img class="rounded-circle" src="/carbook-master/images/nehir.jpg"
+                         alt="Header Avatar"
+                         style="width: 35px; height: 35px; object-fit: cover; border: 2px solid #4a5d23;">
+
+                    <span class="d-none d-sm-inline-block ml-2" style="font-weight: 600; color: #4a5d23; font-size: 14px;">
+                        Nehir Tayşi
+                    </span>
+                    <i class="mdi mdi-chevron-down d-none d-sm-inline-block ml-1" style="color: #4a5d23;"></i>
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-right shadow-lg" style="border-radius: 8px; border: none; min-width: 200px; padding: 10px 0;">
+
+                    <div class="dropdown-header text-center" style="background-color: #f8f9fa; margin-top: -10px; border-radius: 8px 8px 0 0; padding: 15px;">
+                        <h6 class="text-overflow m-0" style="color: #4a5d23; font-weight: 700;">Hoş Geldin!</h6>
+                    </div>
+
+                    <a class="dropdown-item d-flex align-items-center justify-content-between py-2" href="javascript:void(0)">
+                        <span><i class="mdi mdi-email-outline mr-2 text-muted"></i>Gelen Kutusu</span>
+                        <span class="badge badge-pill badge-info" style="background-color: #4a5d23;">3</span>
+                    </a>
+
+                    <a class="dropdown-item d-flex align-items-center justify-content-between py-2" href="javascript:void(0)">
+                        <span><i class="mdi mdi-account-circle-outline mr-2 text-muted"></i>Profilim</span>
+                        <span class="badge badge-pill badge-warning">1</span>
+                    </a>
+
+                    <a class="dropdown-item py-2" href="javascript:void(0)">
+                        <i class="mdi mdi-cog-outline mr-2 text-muted"></i>Ayarlar
+                    </a>
+
+                    <a class="dropdown-item py-2" href="javascript:void(0)">
+                        <i class="mdi mdi-lock-outline mr-2 text-muted"></i>Ekranı Kilitle
+                    </a>
+
+                    <div class="dropdown-divider" style="border-top: 1px solid #eee;"></div>
+
+                    <a class="dropdown-item text-danger py-2" href="/AdminLogin/Logout/" style="font-weight: 600;">
+                        <i class="mdi mdi-logout-variant mr-2"></i> Güvenli Çıkış
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>

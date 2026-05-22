@@ -1,0 +1,199 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\frontend\\udemycarbook.webui\\views\\shared\\components\\_servicecomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|solutionrelative:frontend\\udemycarbook.webui\\views\\shared\\components\\_servicecomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\frontend\\udemycarbook.webui\\views\\shared\\components\\_aboutuscomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|solutionrelative:frontend\\udemycarbook.webui\\views\\shared\\components\\_aboutuscomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\frontend\\udemycarbook.webui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|solutionrelative:frontend\\udemycarbook.webui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\frontend\\udemycarbook.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|solutionrelative:frontend\\udemycarbook.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\frontend\\udemycarbook.webui\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|solutionrelative:frontend\\udemycarbook.webui\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\frontend\\udemycarbook.webui\\views\\shared\\components\\_maincoveruilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|solutionrelative:frontend\\udemycarbook.webui\\views\\shared\\components\\_maincoveruilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\frontend\\udemycarbook.webui\\views\\shared\\components\\_navbaruilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|solutionrelative:frontend\\udemycarbook.webui\\views\\shared\\components\\_navbaruilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\frontend\\udemycarbook.webui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D68DD087-EBF9-41C7-83AB-2628637F9FA6}|Frontend\\UdemyCarBook.WebUI\\UdemyCarBook.WebUI.csproj|solutionrelative:frontend\\udemycarbook.webui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A0676D-D079-4080-89C3-3BD0CE48D5E8}|Core\\UdemyCarBook.Application\\UdemyCarBook.Application.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\core\\udemycarbook.application\\interfaces\\reservationinterfaces\\ireservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A0676D-D079-4080-89C3-3BD0CE48D5E8}|Core\\UdemyCarBook.Application\\UdemyCarBook.Application.csproj|solutionrelative:core\\udemycarbook.application\\interfaces\\reservationinterfaces\\ireservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A0676D-D079-4080-89C3-3BD0CE48D5E8}|Core\\UdemyCarBook.Application\\UdemyCarBook.Application.csproj|c:\\users\\admin\\desktop\\nehirstajyer\\udemycarbook\\core\\udemycarbook.application\\features\\mediat\u00F6r\\queires\\reservationqueries\\getreservationqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A0676D-D079-4080-89C3-3BD0CE48D5E8}|Core\\UdemyCarBook.Application\\UdemyCarBook.Application.csproj|solutionrelative:core\\udemycarbook.application\\features\\mediat\u00F6r\\queires\\reservationqueries\\getreservationqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 276,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetReservationQueryResult.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Core\\UdemyCarBook.Application\\Features\\Mediat\u00F6r\\Queires\\ReservationQueries\\GetReservationQueryResult.cs",
+              "RelativeDocumentMoniker": "Core\\UdemyCarBook.Application\\Features\\Mediat\u00F6r\\Queires\\ReservationQueries\\GetReservationQueryResult.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Core\\UdemyCarBook.Application\\Features\\Mediat\u00F6r\\Queires\\ReservationQueries\\GetReservationQueryResult.cs",
+              "RelativeToolTip": "Core\\UdemyCarBook.Application\\Features\\Mediat\u00F6r\\Queires\\ReservationQueries\\GetReservationQueryResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T20:59:52.108Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Core\\UdemyCarBook.Application\\Interfaces\\ReservationInterfaces\\IReservationRepository.cs",
+              "RelativeDocumentMoniker": "Core\\UdemyCarBook.Application\\Interfaces\\ReservationInterfaces\\IReservationRepository.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Core\\UdemyCarBook.Application\\Interfaces\\ReservationInterfaces\\IReservationRepository.cs",
+              "RelativeToolTip": "Core\\UdemyCarBook.Application\\Interfaces\\ReservationInterfaces\\IReservationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T21:25:15.481Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_ServiceComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_ServiceComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_ServiceComponentPartial\\Default.cshtml*",
+              "RelativeToolTip": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_ServiceComponentPartial\\Default.cshtml*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T12:21:44.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_AboutUsComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_AboutUsComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_AboutUsComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_AboutUsComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T12:20:15.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\appsettings.json",
+              "RelativeDocumentMoniker": "Frontend\\UdemyCarBook.WebUI\\appsettings.json",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\appsettings.json",
+              "RelativeToolTip": "Frontend\\UdemyCarBook.WebUI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-20T11:58:11.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Program.cs",
+              "RelativeDocumentMoniker": "Frontend\\UdemyCarBook.WebUI\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Program.cs",
+              "RelativeToolTip": "Frontend\\UdemyCarBook.WebUI\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwDYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T00:01:41.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DefaultController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Controllers\\DefaultController.cs",
+              "RelativeDocumentMoniker": "Frontend\\UdemyCarBook.WebUI\\Controllers\\DefaultController.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Controllers\\DefaultController.cs",
+              "RelativeToolTip": "Frontend\\UdemyCarBook.WebUI\\Controllers\\DefaultController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T10:14:41.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_MainCoverUILayoutComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_MainCoverUILayoutComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_MainCoverUILayoutComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_MainCoverUILayoutComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T09:31:50.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_NavbarUILayoutComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_NavbarUILayoutComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_NavbarUILayoutComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\Components\\_NavbarUILayoutComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwFgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T09:31:36.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NehirStajyer\\UdemyCarBook\\Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Frontend\\UdemyCarBook.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwC4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-19T23:15:27.903Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

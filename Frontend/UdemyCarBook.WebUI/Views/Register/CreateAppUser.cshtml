@@ -1,0 +1,205 @@
+﻿@model UdemyCarBook.Dto.RegisterDtos.CreateRegisterDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CarBook - Kayıt Ol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="~/Admin/vertical/assets/images/favicon.ico">
+
+    <link href="~/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        :root {
+            --carbook-green: #6b8e23;
+            --dark-green: #4a5d23;
+        }
+
+        body {
+            background-color: #f4f7f6;
+        }
+
+        .text-carbook {
+            color: var(--carbook-green) !important;
+        }
+
+        .bg-register {
+            background-image: linear-gradient(rgba(107, 142, 35, 0.3), rgba(42, 59, 13, 0.45)), url('https://i.pinimg.com/736x/37/ac/3f/37ac3f68c9335c7cca03bd30c63e3107.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .login-sidebar-content p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9) !important;
+            font-weight: 500;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .btn-carbook {
+            background-color: var(--carbook-green) !important;
+            border-color: var(--carbook-green) !important;
+            color: white !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 12px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+            .btn-carbook:hover {
+                background-color: var(--dark-green) !important;
+                box-shadow: 0px 5px 15px rgba(107, 142, 35, 0.3);
+            }
+
+        .form-control-user {
+            border-radius: 5px;
+            padding: 24px 15px;
+            border: 1px solid #e1e1e1;
+            font-size: 14px;
+        }
+
+            .form-control-user:focus {
+                border-color: var(--carbook-green);
+                box-shadow: 0 0 0 0.2rem rgba(107, 142, 35, 0.15);
+            }
+
+        .password-hint {
+            font-size: 11px;
+            color: #888;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .social-list-item:hover {
+            background-color: var(--carbook-green) !important;
+            color: white !important;
+            border-color: var(--carbook-green) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-center min-vh-100">
+                    <div class="w-100 d-block bg-white shadow-lg rounded my-5">
+                        <div class="row no-gutters">
+
+                            <div class="col-lg-5 d-none d-lg-flex bg-register rounded-left">
+                                <div class="login-sidebar-content">
+                                    <p>Araç Kiralamanın En İyi Yolu</p>
+                                    <div class="mt-4">
+                                        <i class="mdi mdi-steering mdi-48px"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7">
+                                <div class="p-5">
+                                    <div class="text-center mb-4">
+                                        <a href="/Default/Index/" class="text-dark font-size-22 font-family-secondary">
+                                            <i class="mdi mdi-car-convertible text-carbook"></i> <b>CarBook</b>
+                                        </a>
+                                    </div>
+
+                                    <h1 class="h5 mb-1 text-center font-weight-bold">Hesabınızı Oluşturun</h1>
+                                    <p class="text-muted mb-4 text-center">Tüm alanların doldurulması zorunludur.</p>
+
+                                    <form class="user" method="post">
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <input type="text" class="form-control form-control-user" placeholder="Adınız" asp-for="Name" required>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control form-control-user" placeholder="Soyadınız" asp-for="Surname" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user" placeholder="Email Adresiniz" asp-for="Email" required>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <input type="text" class="form-control form-control-user" placeholder="Kullanıcı Adınız" asp-for="Username" required>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="password"
+                                                       class="form-control form-control-user"
+                                                       placeholder="Şifreniz"
+                                                       asp-for="Password"
+                                                       required
+                                                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@@$!%*?&])[A-Za-z\d@@$!%*?&]{8,}$"
+                                                       title="Şifre en az 8 karakter olmalı; bir büyük harf, bir küçük harf, bir rakam ve bir özel karakter içermelidir.">
+                                                <small class="password-hint">Min. 8 karakter (A, a, 1, #)</small>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-carbook btn-block waves-effect waves-light mt-2">
+                                            <i class="mdi mdi-account-plus mr-1"></i> Hesabı Oluştur
+                                        </button>
+                                    </form>
+
+                                    <div class="text-center mt-4">
+                                        <h5 class="text-muted font-size-14">Sosyal Medya Hesaplarımız</h5>
+                                        <ul class="list-inline mt-3 mb-0">
+                                            <li class="list-inline-item">
+                                                <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="mdi mdi-google"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="mdi mdi-twitter"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="row mt-4">
+                                        <div class="col-12 text-center">
+                                            <p class="text-muted mb-0">
+                                                Zaten bir hesabınız var mı?
+                                                <a href="/Login/Index/" class="text-carbook font-weight-bold ml-1">Giriş Yap</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="~/Admin/vertical/assets/js/jquery.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/metismenu.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/waves.js"></script>
+    <script src="~/Admin/vertical/assets/js/simplebar.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/theme.js"></script>
+
+</body>
+</html>

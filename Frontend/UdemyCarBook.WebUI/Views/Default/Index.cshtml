@@ -1,0 +1,347 @@
+﻿@model UdemyCarBook.Dto.LocationDtos.ResultLocationDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+
+<style>
+    #drop option {
+        color: black;
+    }
+</style>
+<style>
+    
+    .datepicker table tr td.disabled,
+    .datepicker table tr td.disabled:hover {
+        background: #e9ecef !important; 
+        color: #adb5bd !important;
+        cursor: not-allowed !important; 
+        text-decoration: line-through; 
+        opacity: 0.6;
+    }
+
+    
+    .datepicker table tr td.today {
+        background-color: #ffeeba !important;
+        border-color: #ffc107 !important;
+        color: black !important;
+        font-weight: bold;
+    }
+
+   
+    .datepicker table tr td.day:not(.disabled) {
+        color: #000 !important;
+        font-weight: 500;
+    }
+</style>
+<style>
+   
+    #carMap {
+        height: 450px !important;
+        width: 100% !important;
+        position: relative !important;
+        display: block !important;
+        z-index: 100 !important;
+    }
+    
+    .leaflet-container {
+        height: 100% !important;
+        width: 100% !important;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadUILayoutComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_NavbarUILayoutComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultCoverUILayoutComponentPartial")
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-12 featured-top">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <form action="/Default/Index" method="post" class="request-form ftco-animate" style="background: #4a5d23 !important; background-color: #4a5d23 !important; border-radius: 0px !important;">
+                                <h2 style="color: white !important;">Şimdi Aracınızı Kiralayın</h2>
+
+                                <div class="form-group">
+                                    <label for="" class="label" style="color: white !important;">Alınacak Lokasyon</label>
+                                   
+                                    @Html.DropDownList("LocationID", (List<SelectListItem>)ViewBag.v, new {
+                                    @class = "form-control",
+                                                                        @id = "drop_pick",
+                                                                        @style = "background: transparent !important; color: white !important; border: 1px solid rgba(255,255,255,0.2) !important;" 
+                                                                })
+                                </div>
+
+                               
+                                <div class="form-group">
+                                    <label for="" class="label" style="color: white !important;">İade Lokasyonu</label>
+                                    @Html.DropDownList("dropOffLocationID", (List<SelectListItem>)ViewBag.v, new {
+                                                                        @class = "form-control",
+                                                                        @id = "drop_off",
+                                                                        @style = "background: transparent !important; color: white !important; border: 1px solid rgba(255,255,255,0.2) !important;" 
+        })
+                                </div>
+
+                                <style>
+                                    select option {
+                                        background-color: #ffffff !important;
+                                        color: #000000 !important;
+                                    }
+
+                                    .form-control option {
+                                        color: black !important;
+                                    }
+
+                                  
+                                    .mfp-wrap {
+                                        position: fixed !important;
+                                        top: 0 !important;
+                                        left: 0 !important;
+                                        height: 100vh !important;
+                                        display: flex !important;
+                                        align-items: center !important;
+                                        justify-content: center !important;
+                                    }
+
+                                    .mfp-container {
+                                        position: relative !important;
+                                        vertical-align: middle !important;
+                                    }
+                                </style>
+
+                                <div class="d-flex">
+                                    <div class="form-group mr-2">
+                                        <label for="" class="label" style="color: white !important;">Alınmak İstenen Tarih</label>
+                                        <input type="text" class="form-control" name="book_pick_date" id="book_pick_date" placeholder="gg/aa/yy" readonly>
+                                    </div>
+                                    <div class="form-group ml-2">
+                                        <label for="" class="label" style="color: white !important;">İade Tarihi</label>
+                                        <input type="text" class="form-control" name="book_off_date" id="book_off_date" placeholder="gg/aa/yy" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex">
+                                    <div class="form-group mr-2" style="flex: 1;">
+                                        <label for="" class="label" style="color: white !important;">Alış Saati</label>
+                                        <input type="text" class="form-control" name="time_pick" id="time_pick" placeholder="09:00" style="background: transparent !important; color: white !important;">
+                                    </div>
+                                    <div class="form-group ml-2" style="flex: 1;">
+                                        <label for="" class="label" style="color: white !important;">İade Saati</label>
+                                        <input type="text" class="form-control" name="time_off" id="time_off" placeholder="09:00" style="background: transparent !important; color: white !important;">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn py-3 px-4"
+                                            onmouseover="this.style.setProperty('background-color', '#3e4d22', 'important')"
+                                            onmouseout="this.style.setProperty('background-color', '#6b8e23', 'important')"
+                                            style="background-color: #6b8e23 !important; border: none !important; color: white !important; font-weight: bold; width: 100%; border-radius: 0px !important; transition: 0.3s;">
+                                        Uygun Araçları Listele
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+ <div class="col-md-8 d-flex align-items-stretch"> <div class="services-wrap rounded-right w-100 bg-white" style="border-radius: 0px !important; padding: 30px; display: flex; flex-direction: column;">
+                           <h3 class="heading-section mb-4 text-center" style="color: #4a5d23; font-weight: 700; font-size: 24px;">
+            Almak İstediğin Konumu Seç
+        </h3>
+        
+        <div id="carMap" style="flex-grow: 1; min-height: 400px; width: 100%; border: 1px solid #eee;"></div>
+    </div>
+</div>
+                               
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var map = L.map('carMap').setView([41.0082, 28.9784], 10);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            // Senin orijinal dizin, hiçbir veriyi silmedim
+            var locations = [
+                { id: 1, name: "Sabiha Gökçen Havalimanı", coords: [40.8986, 29.3092], info: "Model-Y, CR-V, Countryman" },
+                { id: 2, name: "Kadıköy Rıhtım", coords: [40.9915, 29.0235], info: "Kuga, Range Rover" },
+                { id: 3, name: "Kartal Köprüsü", coords: [40.9085, 29.2120], info: "Puma, Explorer, Range Rover" },
+                { id: 4, name: "İstanbul Havalimanı", coords: [41.2752, 28.7519], info: "Defender, Discovery" },
+                { id: 5, name: "Maltepe Sahil", coords: [40.9230, 29.1315], info: "Avenger, Compass, Wrangler" },
+                { id: 6, name: "Bahçelievler", coords: [40.9950, 28.8600], info: "Swift, S-Cross" },
+                { id: 1002, name: "Bakırköy Meydan", coords: [40.9785, 28.8745], info: "Vitara, Ev3, Ev6" },
+                { id: 1003, name: "Bağcılar Meydan", coords: [41.0345, 28.8570], info: "Ev9, Corsa" },
+                { id: 1004, name: "Taksim Meydanı", coords: [41.0370, 28.9850], info: "Astra, 5008, E-308" },
+                { id: 1005, name: "Esenler Otogar", coords: [41.0395, 28.8940], info: "Peugeot ve Opel Modelleri" }
+            ];
+
+            locations.forEach(function (loc) {
+
+                fetch(`http://nehirtaysi-001-site1.stempurl.com/api/RentACars?locationID=${loc.id}&available=true`)
+                    .then(response => {
+                        if (!response.ok) throw new Error("API Hatası");
+                        return response.json();
+                    })
+                    .then(cars => {
+                        // DÜZELTME: JSON'dan gelen küçük harfli 'brand' ve 'model' özelliklerini kullanıyoruz
+                        var dynamicInfo = cars.length > 0
+                            ? cars.map(c => c.brand + " " + c.model).join(", ")
+                            : "Bu konumda müsait araç bulunamadı";
+
+                        var marker = L.marker(loc.coords).addTo(map);
+                        marker.bindPopup(`
+                            <div style="font-family: 'Poppins', sans-serif; text-align:center;">
+                                <b style="color: #4a5d23; font-size: 14px;">${loc.name}</b><br>
+                                <small style="color:#666;">${dynamicInfo}</small><br>
+                                <a href="/RentACarList/Index?id=${loc.id}"
+                                   style="display: inline-block; margin-top: 8px; background: #6b8e23; color: white; padding: 5px 12px; border-radius: 3px; text-decoration: none; font-size: 11px; font-weight:bold;">
+                                   Araçları Listele
+                                </a>
+                            </div>
+                        `);
+                    })
+                    .catch(error => {
+                        // API hata verirse senin orijinal verilerin görünür
+                        var marker = L.marker(loc.coords).addTo(map);
+                        marker.bindPopup(`
+                            <div style="font-family: 'Poppins', sans-serif; text-align:center;">
+                                <b style="color: #4a5d23; font-size: 14px;">${loc.name}</b><br>
+                                <small style="color:#666;">${loc.info}</small><br>
+                                <a href="/RentACarList/Index?id=${loc.id}"
+                                   style="display: inline-block; margin-top: 8px; background: #6b8e23; color: white; padding: 5px 12px; border-radius: 3px; text-decoration: none; font-size: 11px; font-weight:bold;">
+                                   Araçları Listele
+                                </a>
+                            </div>
+                        `);
+                    });
+            });
+
+        });
+    </script>
+
+    <script>
+        // İkinci scriptin aynen korunmuştur!
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropPick = document.getElementById("drop_pick");
+            var dropOff = document.getElementById("drop_off");
+
+            if (dropPick && dropOff) {
+                dropPick.addEventListener("change", function () {
+                    dropOff.value = dropPick.value;
+                });
+            }
+        });
+    </script>
+
+    @await Component.InvokeAsync("_AboutUsComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultLast5CarsWithBrandsComponentPartial")
+
+    @await Component.InvokeAsync("_ServiceComponentPartial")
+
+    @await Component.InvokeAsync("_TestimonialComponentPartial")
+
+   
+
+    @await Component.InvokeAsync("_DefaultStatisticsComponentPartial")
+
+    @await Component.InvokeAsync("_FooterUILayoutComponentPartial")
+
+    @await Component.InvokeAsync("_ScriptUILayoutComponentPartial")
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            Swal.fire({
+                title: 'Tebrikler!',
+                text: '@TempData["SuccessMessage"]',
+                icon: 'success',
+                confirmButtonColor: '#1089ff',
+                confirmButtonText: 'Tamam'
+            });
+        </script>
+    }
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            var today = new Date();
+            var pickerOptions = {
+                format: 'dd/mm/yyyy',
+                autoclose: true,
+                startDate: today,
+                language: 'tr',
+                todayHighlight: true
+            };
+
+            $('#book_pick_date').datepicker(pickerOptions).on('changeDate', function (selected) {
+                var selectedDate = new Date(selected.date.valueOf());
+                $('#book_off_date').datepicker('setStartDate', selectedDate);
+
+                var maxDate = new Date(selected.date.valueOf());
+                maxDate.setMonth(maxDate.getMonth() + 1);
+                $('#book_off_date').datepicker('setEndDate', maxDate);
+
+                var nextDay = new Date(selected.date.valueOf());
+                nextDay.setDate(nextDay.getDate() + 1);
+                $('#book_off_date').datepicker('update', nextDay);
+            });
+
+            $('#book_off_date').datepicker(pickerOptions);
+
+            $('#time_pick').timepicker({
+                'timeFormat': 'H:i',
+                'step': 30,
+                'scrollDefault': 'now'
+            }).on('changeTime', function() {
+                
+                var selectedTime = $(this).val();
+                $('#time_off').val(selectedTime);
+            });
+
+            
+            if ($('#time_pick').val()) {
+                $('#time_off').val($('#time_pick').val());
+            }
+
+           
+            var dropPick = document.getElementById("drop_pick");
+            var dropOffDisplay = document.getElementById("drop_off_display");
+            var dropOffHidden = document.getElementById("drop_off_hidden");
+
+            function syncLocations() {
+                if (dropPick && dropOffDisplay && dropOffHidden) {
+                    dropOffDisplay.value = dropPick.value;
+                    dropOffHidden.value = dropPick.value;
+                }
+            }
+
+            if (dropPick) {
+                syncLocations();
+                dropPick.addEventListener("change", syncLocations);
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,1783 @@
+[
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AboutsController",
+    "Method": "AboutList",
+    "RelativePath": "api/Abouts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AboutsController",
+    "Method": "CreateAbout",
+    "RelativePath": "api/Abouts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.AboutCommand.CreateAboutCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AboutsController",
+    "Method": "RemoveAbout",
+    "RelativePath": "api/Abouts",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AboutsController",
+    "Method": "UpdateAbout",
+    "RelativePath": "api/Abouts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.AboutCommand.UpdateAboutCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AboutsController",
+    "Method": "GetAbout",
+    "RelativePath": "api/Abouts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AuthorsController",
+    "Method": "LocaitonList",
+    "RelativePath": "api/Authors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AuthorsController",
+    "Method": "CreateLocaiton",
+    "RelativePath": "api/Authors",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.AuthorCommands.CreateAuthorCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AuthorsController",
+    "Method": "RemoveFeauture",
+    "RelativePath": "api/Authors",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AuthorsController",
+    "Method": "UpdateLocaiton",
+    "RelativePath": "api/Authors",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.AuthorCommands.UpdateAuthorCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.AuthorsController",
+    "Method": "GetLocaiton",
+    "RelativePath": "api/Authors/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BannersController",
+    "Method": "BannerList",
+    "RelativePath": "api/Banners",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BannersController",
+    "Method": "CreateBanner",
+    "RelativePath": "api/Banners",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.BannerCommand.CreateBannerCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BannersController",
+    "Method": "RemoveBanner",
+    "RelativePath": "api/Banners",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BannersController",
+    "Method": "UpdateBanner",
+    "RelativePath": "api/Banners",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.BannerCommand.UpdateBannerCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BannersController",
+    "Method": "GetBanner",
+    "RelativePath": "api/Banners/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BlogsController",
+    "Method": "BlogList",
+    "RelativePath": "api/Blogs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BlogsController",
+    "Method": "CreateBlog",
+    "RelativePath": "api/Blogs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.BlogCommands.CreateBlogCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BlogsController",
+    "Method": "RemoveBlog",
+    "RelativePath": "api/Blogs",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BlogsController",
+    "Method": "UpdateBlog",
+    "RelativePath": "api/Blogs",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.BlogCommands.UpdateBlogCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BlogsController",
+    "Method": "GetBlog",
+    "RelativePath": "api/Blogs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BlogsController",
+    "Method": "GetAllBlogsWithAuthorList",
+    "RelativePath": "api/Blogs/GetAllBlogsWithAuthorList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BlogsController",
+    "Method": "GetBlogByAuthorId",
+    "RelativePath": "api/Blogs/GetBlogByAuthorId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BlogsController",
+    "Method": "GetLast3BlogsWithAuthorsList",
+    "RelativePath": "api/Blogs/GetLast3BlogsWithAuthorsList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BrandsController",
+    "Method": "BrandList",
+    "RelativePath": "api/Brands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BrandsController",
+    "Method": "CreateBrand",
+    "RelativePath": "api/Brands",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.BrandCommand.CreateBrandCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BrandsController",
+    "Method": "RemoveBrand",
+    "RelativePath": "api/Brands",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BrandsController",
+    "Method": "UpdateBrand",
+    "RelativePath": "api/Brands",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.BrandCommand.UpdateBrandCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.BrandsController",
+    "Method": "GetBrand",
+    "RelativePath": "api/Brands/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarDescriptionsController",
+    "Method": "CarDescriptionByCarId",
+    "RelativePath": "api/CarDescriptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarFeaturesController",
+    "Method": "CarFeatureListByCarId",
+    "RelativePath": "api/CarFeatures",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarFeaturesController",
+    "Method": "CreateCarFeatureByCarID",
+    "RelativePath": "api/CarFeatures",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediator.Commands.CarFeatureCommands.CreateCarFeatureByCarCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarFeaturesController",
+    "Method": "CarFeatureChangeAvailableToFalse",
+    "RelativePath": "api/CarFeatures/CarFeatureChangeAvailableToFalse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarFeaturesController",
+    "Method": "CarFeatureChangeAvailableToTrue",
+    "RelativePath": "api/CarFeatures/CarFeatureChangeAvailableToTrue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarPricingsController",
+    "Method": "GetCarPricingWithCarList",
+    "RelativePath": "api/CarPricings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarPricingsController",
+    "Method": "GetCarPricingWithTimePeriodList",
+    "RelativePath": "api/CarPricings/GetCarPricingWithTimePeriodList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarsController",
+    "Method": "CarList",
+    "RelativePath": "api/Cars",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarsController",
+    "Method": "CreateCar",
+    "RelativePath": "api/Cars",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.CarCommand.CreateCarCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarsController",
+    "Method": "UpdateCar",
+    "RelativePath": "api/Cars",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.CarCommand.UpdateCarCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarsController",
+    "Method": "GetCar",
+    "RelativePath": "api/Cars/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarsController",
+    "Method": "RemoveCar",
+    "RelativePath": "api/Cars/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarsController",
+    "Method": "GetCarWithBrand",
+    "RelativePath": "api/Cars/GetCarWithBrand",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CarsController",
+    "Method": "GetLast5CarsWithBrandQueryHandler",
+    "RelativePath": "api/Cars/GetLast5CarsWithBrandQueryHandler",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CategoriesController",
+    "Method": "CategoryList",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CategoriesController",
+    "Method": "CreateCategory",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.CategoryCommand.CreateCategoryCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CategoriesController",
+    "Method": "RemoveCategory",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CategoriesController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.CategoryCommand.UpdateCategoryCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CategoriesController",
+    "Method": "GetCategory",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CommentsController",
+    "Method": "CommentList",
+    "RelativePath": "api/Comments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CommentsController",
+    "Method": "CreateComment",
+    "RelativePath": "api/Comments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comment",
+        "Type": "UdemyCarBook.Domain.Entities.Comment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CommentsController",
+    "Method": "RemoveComment",
+    "RelativePath": "api/Comments",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CommentsController",
+    "Method": "UpdateComment",
+    "RelativePath": "api/Comments",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comment",
+        "Type": "UdemyCarBook.Domain.Entities.Comment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CommentsController",
+    "Method": "GetComment",
+    "RelativePath": "api/Comments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CommentsController",
+    "Method": "CommentCountByBlog",
+    "RelativePath": "api/Comments/CommentCountByBlog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CommentsController",
+    "Method": "CommentListByBlog",
+    "RelativePath": "api/Comments/CommentListByBlog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.CommentsController",
+    "Method": "CreateCommentWithMediator",
+    "RelativePath": "api/Comments/CreateCommentWithMediator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.CommentCommands.CreateCommentCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ContactsController",
+    "Method": "ContactList",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ContactsController",
+    "Method": "CreateContact",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.ContactCommand.CreateContactCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ContactsController",
+    "Method": "RemoveContact",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ContactsController",
+    "Method": "UpdateContact",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.CROS.Commands.ContactCommand.UpdateContactCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ContactsController",
+    "Method": "GetContact",
+    "RelativePath": "api/Contacts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FeaturesController",
+    "Method": "FeatureList",
+    "RelativePath": "api/Features",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FeaturesController",
+    "Method": "CreateFeature",
+    "RelativePath": "api/Features",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.FeatureCommands.CreateFeatureCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FeaturesController",
+    "Method": "UpdateFeature",
+    "RelativePath": "api/Features",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.FeatureCommands.UpdateFeatureCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FeaturesController",
+    "Method": "GetFeature",
+    "RelativePath": "api/Features/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FeaturesController",
+    "Method": "RemoveFeauture",
+    "RelativePath": "api/Features/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FooterAddressesController",
+    "Method": "FooterAddressList",
+    "RelativePath": "api/FooterAddresses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FooterAddressesController",
+    "Method": "CreateFooterAddress",
+    "RelativePath": "api/FooterAddresses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.FooterAddressCommands.CreateFooterAddressCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FooterAddressesController",
+    "Method": "RemoveFooterAddress",
+    "RelativePath": "api/FooterAddresses",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FooterAddressesController",
+    "Method": "UpdateFooterAddress",
+    "RelativePath": "api/FooterAddresses",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.FooterAddressCommands.UpdateFooterAddressCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.FooterAddressesController",
+    "Method": "GetFooterAddress",
+    "RelativePath": "api/FooterAddresses/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.LocationsController",
+    "Method": "LocationList",
+    "RelativePath": "api/Locations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.LocationsController",
+    "Method": "CreateLocation",
+    "RelativePath": "api/Locations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.LocationCommand.CreateLocationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.LocationsController",
+    "Method": "RemoveLocation",
+    "RelativePath": "api/Locations",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.LocationsController",
+    "Method": "UpdateLocation",
+    "RelativePath": "api/Locations",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.LocationCommand.UpdateLocationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.LocationsController",
+    "Method": "GetLocation",
+    "RelativePath": "api/Locations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.LoginsController",
+    "Method": "Index",
+    "RelativePath": "api/Logins",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "UdemyCarBook.Application.Features.Mediator.Queries.AppUserQueries.GetCheckAppUserQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.PricingsController",
+    "Method": "LocaitonList",
+    "RelativePath": "api/Pricings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.PricingsController",
+    "Method": "CreateLocaiton",
+    "RelativePath": "api/Pricings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.PricingCommands.CreatePricingCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.PricingsController",
+    "Method": "RemoveFeauture",
+    "RelativePath": "api/Pricings",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.PricingsController",
+    "Method": "UpdateLocaiton",
+    "RelativePath": "api/Pricings",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.PricingCommands.UpdatePricingCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.PricingsController",
+    "Method": "GetLocaiton",
+    "RelativePath": "api/Pricings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.RegistersController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Registers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediator.Commands.AppUserCommands.CreateAppUserCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.RentACarsController",
+    "Method": "GetRentACarListByLocation",
+    "RelativePath": "api/RentACars",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locationID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "available",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ReservationsController",
+    "Method": "ReservationList",
+    "RelativePath": "api/Reservations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ReservationsController",
+    "Method": "CreateReservation",
+    "RelativePath": "api/Reservations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediator.Commands.ReservationCommands.CreateReservationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ReservationsController",
+    "Method": "ChangeReservationStatusToCancel",
+    "RelativePath": "api/Reservations/ChangeReservationStatusToCancel/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ReviewsController",
+    "Method": "ReviewListByCarId",
+    "RelativePath": "api/Reviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ReviewsController",
+    "Method": "CreateReview",
+    "RelativePath": "api/Reviews",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediator.Commands.ReviewCommands.CreateReviewCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ReviewsController",
+    "Method": "UpdateReview",
+    "RelativePath": "api/Reviews",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediator.Commands.ReviewCommands.UpdateReviewCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ServicesController",
+    "Method": "LocaitonList",
+    "RelativePath": "api/Services",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ServicesController",
+    "Method": "CreateLocaiton",
+    "RelativePath": "api/Services",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.ServiceCCommands.CreateServiceCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ServicesController",
+    "Method": "RemoveFeauture",
+    "RelativePath": "api/Services",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ServicesController",
+    "Method": "UpdateLocaiton",
+    "RelativePath": "api/Services",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.ServiceCCommands.UpdateServiceCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.ServicesController",
+    "Method": "GetLocaiton",
+    "RelativePath": "api/Services/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.SocialMediasController",
+    "Method": "LocaitonList",
+    "RelativePath": "api/SocialMedias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.SocialMediasController",
+    "Method": "CreateLocaiton",
+    "RelativePath": "api/SocialMedias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.SocialMediaCommands.CreateSocialMediaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.SocialMediasController",
+    "Method": "RemoveFeauture",
+    "RelativePath": "api/SocialMedias",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.SocialMediasController",
+    "Method": "UpdateLocaiton",
+    "RelativePath": "api/SocialMedias",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.SocialMediaCommands.UpdateSocialMediaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.SocialMediasController",
+    "Method": "GetLocaiton",
+    "RelativePath": "api/SocialMedias/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetAuthorCount",
+    "RelativePath": "api/Statistics/GetAuthorCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetAvgRentPriceForDaily",
+    "RelativePath": "api/Statistics/GetAvgRentPriceForDaily",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetAvgRentPriceForMonthly",
+    "RelativePath": "api/Statistics/GetAvgRentPriceForMonthly",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetAvgRentPriceForWeekly",
+    "RelativePath": "api/Statistics/GetAvgRentPriceForWeekly",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetBlogCount",
+    "RelativePath": "api/Statistics/GetBlogCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetBlogTitleByMaxBlogComment",
+    "RelativePath": "api/Statistics/GetBlogTitleByMaxBlogComment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetBrandCount",
+    "RelativePath": "api/Statistics/GetBrandCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetBrandNameByMaxCar",
+    "RelativePath": "api/Statistics/GetBrandNameByMaxCar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetCarBrandAndModelByRentPriceDailyMax",
+    "RelativePath": "api/Statistics/GetCarBrandAndModelByRentPriceDailyMax",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetCarBrandAndModelByRentPriceDailyMin",
+    "RelativePath": "api/Statistics/GetCarBrandAndModelByRentPriceDailyMin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetCarCount",
+    "RelativePath": "api/Statistics/GetCarCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetCarCountByFuelElectric",
+    "RelativePath": "api/Statistics/GetCarCountByFuelElectric",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetCarCountByFuelGasolineOrDiesel",
+    "RelativePath": "api/Statistics/GetCarCountByFuelGasolineOrDiesel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetCarCountByKmSmallerThen1000",
+    "RelativePath": "api/Statistics/GetCarCountByKmSmallerThen1000",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetCarCountByTranmissionIsAuto",
+    "RelativePath": "api/Statistics/GetCarCountByTranmissionIsAuto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetLocationCount",
+    "RelativePath": "api/Statistics/GetLocationCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TagCloudsController",
+    "Method": "LocaitonList",
+    "RelativePath": "api/TagClouds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TagCloudsController",
+    "Method": "CreateLocaiton",
+    "RelativePath": "api/TagClouds",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.TagCloudCommands.CreateTagCloudCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TagCloudsController",
+    "Method": "RemoveFeauture",
+    "RelativePath": "api/TagClouds",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TagCloudsController",
+    "Method": "UpdateLocaiton",
+    "RelativePath": "api/TagClouds",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.TagCloudCommands.UpdateTagCloudCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TagCloudsController",
+    "Method": "GetLocaiton",
+    "RelativePath": "api/TagClouds/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TagCloudsController",
+    "Method": "GetTagCloudByBlogId",
+    "RelativePath": "api/TagClouds/GetTagCloudByBlogId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TestimonialsController",
+    "Method": "LocaitonList",
+    "RelativePath": "api/Testimonials",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TestimonialsController",
+    "Method": "CreateLocaiton",
+    "RelativePath": "api/Testimonials",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.TestimonialCommands.CreateTestimonialCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TestimonialsController",
+    "Method": "RemoveFeauture",
+    "RelativePath": "api/Testimonials",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TestimonialsController",
+    "Method": "UpdateLocaiton",
+    "RelativePath": "api/Testimonials",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "UdemyCarBook.Application.Features.Mediat\u00F6r.Commands.TestimonialCommands.UpdateTestimonialCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UdemyCarBook.WebApi.Controllers.TestimonialsController",
+    "Method": "GetLocaiton",
+    "RelativePath": "api/Testimonials/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

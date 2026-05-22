@@ -1,0 +1,50 @@
+﻿@model UdemyCarBook.Dto.BlogDtos.GetBlogById
+@{
+    ViewData["Title"] = "Blog Detayı";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-9 ftco-animate">
+
+                @await Component.InvokeAsync("_BlogDetailsMainComponentPartial", new { id = ViewBag.blogid })
+
+                @await Component.InvokeAsync("_BlogDetailsParagraphComponentPartial", new { id = ViewBag.blogid })
+
+                @await Component.InvokeAsync("_BlogDetailsAuthorAboutComponentPartial", new { id = ViewBag.blogid })
+
+                <div class="pt-5 mt-5" style="border-top: 1px solid #eee;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .blog-content {
+        font-size: 18px !important;
+        line-height: 1.8 !important;
+        color: #444 !important;
+        text-align: justify !important; 
+        margin-bottom: 30px;
+    }
+
+    .about-author {
+        border-left: 5px solid #6b8e23 !important;
+        background: #f8f9fa !important;
+        padding: 35px !important;
+        margin-top: 40px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .custom-blog-container img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+    }
+</style>

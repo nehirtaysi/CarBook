@@ -1,0 +1,13 @@
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\bin\Release\net8.0\UdemyCarBook.Domain.deps.json
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\bin\Release\net8.0\UdemyCarBook.Domain.runtimeconfig.json
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\bin\Release\net8.0\UdemyCarBook.Domain.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\bin\Release\net8.0\UdemyCarBook.Domain.pdb
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\UdemyCarBook.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\UdemyCarBook.Domain.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\UdemyCarBook.Domain.AssemblyInfo.cs
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\UdemyCarBook.Domain.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\UdemyCarBook.Domain.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\refint\UdemyCarBook.Domain.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\UdemyCarBook.Domain.pdb
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\UdemyCarBook.Domain.genruntimeconfig.cache
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Release\net8.0\ref\UdemyCarBook.Domain.dll

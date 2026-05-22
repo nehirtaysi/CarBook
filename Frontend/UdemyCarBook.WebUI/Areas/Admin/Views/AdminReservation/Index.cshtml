@@ -1,0 +1,97 @@
+﻿@model List<ResultReservationDto>
+@{
+    ViewData["Title"] = "Rezervasyon İşlemleri";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Rezervasyon Listesi</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Müşteri Adı</th>
+                                        <th>Telefon</th>
+                                        <th>Alış / İade Lokasyonu</th>
+                                        <th>Durum</th>
+                                        <th>İşlemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <th>@count</th>
+                                            <td>@item.Name @item.Surname</td>
+                                            <td>@item.Phone</td>
+                                            <td>@item.PickUpLocationName - @item.DropOffLocationName</td>
+                                            <td>
+                                                @if (item.Status == "İptal Edildi")
+                                                {
+                                                    <span class="badge badge-danger">@item.Status</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge badge-success">@item.Status</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (item.Status != "İptal Edildi")
+                                                {
+                                                    <!-- Modern JavaScript Fonksiyonunu Çağırıyoruz -->
+                                                    <button class="btn btn-outline-danger btn-sm"
+                                                            onclick="confirmCancel(@item.ReservationID)">
+                                                        İptal Et
+                                                    </button>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">İşlem Yapılamaz</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SweetAlert2 Kütüphanesi -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function confirmCancel(id) {
+        Swal.fire({
+            title: 'Emin misiniz?',
+            text: "Bu rezervasyonu iptal etmek istediğinize emin misiniz? Bu işlem geri alınamaz!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Evet, İptal Et',
+            cancelButtonText: 'Vazgeç',
+            background: '#fff',
+            customClass: {
+                popup: 'animated fadeInDown'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Onay verilirse Controller'daki Action'a yönlendiriyoruz
+                window.location.href = "/Admin/AdminReservation/CancelReservation/" + id;
+            }
+        })
+    }
+</script>

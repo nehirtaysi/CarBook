@@ -1,0 +1,132 @@
+﻿@model List<ResultCarPricingListWithModelDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<style>
+    .table tbody tr:hover,
+    .table-hover tbody tr:hover,
+    tr.text-center:hover {
+        background-color: rgba(107, 142, 35, 0.05) !important;
+        box-shadow: 0px 10px 20px rgba(74, 93, 35, 0.15) !important;
+        transition: 0.3s;
+    }
+
+    .table td, .table th {
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    }
+
+    .num {
+        font-weight: 400 !important;
+        color: #4a5d23 !important;
+    }
+
+    .old-price-table {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 13px;
+        display: block;
+        line-height: 1;
+    }
+
+    .new-price-table {
+        font-weight:650 !important;
+        color: #e74c3c !important;
+        font-size:22px !important;
+    }
+</style>
+
+<section class="ftco-section ftco-cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="car-list">
+                    <table class="table">
+                        <thead>
+                            <tr class="text-center">
+                                <th style="border:none; background: transparent !important;">&nbsp;</th>
+                                <th style="border:none; background: transparent !important;">&nbsp;</th>
+                                <th class="heading" style="background: #6b8e23 !important; color: white !important; border:none; padding: 30px 10px;">Günlük Ücret</th>
+                                <th class="heading" style="background: #4a5d23 !important; color: white !important; border:none; padding: 30px 10px;">Haftalık Ücret</th>
+                                <th class="heading" style="background: #000000 !important; color: white !important; border:none; padding: 30px 10px;">Aylık Ücret</th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr class="text-center">
+                                    <td class="car-image"><div class="img" style="background-image:url(@item.CoverImageUrl); border-radius: 0px !important;"></div></td>
+                                    <td class="product-name">
+                                        <h3>@item.Brand @item.model</h3>
+                                        <p class="mb-0 rated">
+                                            <span style="color: #6b8e23;" class="ion-ios-star"></span>
+                                            <span style="color: #6b8e23;" class="ion-ios-star"></span>
+                                            <span style="color: #6b8e23;" class="ion-ios-star"></span>
+                                            <span style="color: #6b8e23;" class="ion-ios-star"></span>
+                                            <span style="color: #6b8e23;" class="ion-ios-star"></span>
+                                        </p>
+                                    </td>
+
+                                    <td class="price">
+                                        <p class="btn-custom"><a href="/Reservation/Index/@item.CarID" style="background: #4a5d23 !important; color: white !important; border-radius: 0px !important; display: inline-block; padding: 10px 20px; text-decoration: none;">Şimdi kiralayın</a></p>
+                                        <div class="price-rate">
+                                            <h3>
+                                                @if (item.IsDailyCampaign)
+                                                {
+                                                    <span class="old-price-table">₺ @item.dailyAmount</span>
+                                                    <span class="new-price-table">₺ @item.DailyCampaignPrice</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="num">₺ @item.dailyAmount</span>
+                                                }
+                                                <span class="per" style="font-weight: 400;">/Günlük</span>
+                                            </h3>
+                                        </div>
+                                    </td>
+
+                                    <td class="price">
+                                        <p class="btn-custom"><a href="/Reservation/Index/@item.CarID" style="background: #4a5d23 !important; color: white !important; border-radius: 0px !important; display: inline-block; padding: 10px 20px; text-decoration: none;">Şimdi kiralayın</a></p>
+                                        <div class="price-rate">
+                                            <h3>
+                                                @if (item.IsWeeklyCampaign)
+                                                {
+                                                    <span class="old-price-table">₺ @item.weeklyAmount</span>
+                                                    <span class="new-price-table">₺ @item.WeeklyCampaignPrice</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="num">₺ @item.weeklyAmount</span>
+                                                }
+                                                <span class="per" style="font-weight: 400;">/Haftalık</span>
+                                            </h3>
+                                        </div>
+                                    </td>
+
+                                    <td class="price">
+                                        <p class="btn-custom"><a href="/Reservation/Index/@item.CarID" style="background: #4a5d23 !important; color: white !important; border-radius: 0px !important; display: inline-block; padding: 10px 20px; text-decoration: none;">Şimdi kiralayın</a></p>
+                                        <div class="price-rate">
+                                            <h3>
+                                                @if (item.IsMonthlyCampaign)
+                                                {
+                                                    <span class="old-price-table">₺ @item.monthlyAmount</span>
+                                                    <span class="new-price-table">₺ @item.MonthlyCampaignPrice</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="num">₺ @item.monthlyAmount</span>
+                                                }
+                                                <span class="per" style="font-weight: 400;">/Aylık</span>
+                                            </h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

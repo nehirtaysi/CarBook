@@ -1,0 +1,89 @@
+﻿@{
+    var currentController = ViewContext.RouteData.Values["Controller"]?.ToString();
+}
+
+<style>
+    .ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
+        color: #6b8e23 !important;
+        font-weight: bold;
+    }
+
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+        color: #6b8e23 !important;
+    }
+
+    .nav-item.auth-item {
+        margin-left: 20px;
+    }
+
+    .push-right {
+        margin-left: auto !important;
+    }
+
+    .nav-login-btn {
+        background-color: #6b8e23 !important;
+        color: white !important;
+        border: 2px solid #6b8e23 !important;
+        border-radius: 8px;
+        padding: 7px 20px !important;
+        font-size: 13px;
+        font-weight: 600;
+        transition: 0.3s;
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+        .nav-login-btn:hover {
+            background-color: transparent !important;
+            color: #6b8e23 !important;
+        }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="~/Default/Index/">
+            Car<span style="color: #6b8e23 !important;">Book</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item @(currentController == "Default" ? "active" : "")">
+                    <a href="~/Default/Index/" class="nav-link">Ana Sayfa</a>
+                </li>
+
+                <li class="nav-item @(currentController == "CarPricing" ? "active" : "")">
+                    <a href="~/CarPricing/Index/" class="nav-link">Fiyatlar</a>
+                </li>
+
+                <li class="nav-item @(currentController == "Car" ? "active" : "")">
+                    <a href="~/Car/Index/" class="nav-link">Arabalar</a>
+                </li>
+
+                <li class="nav-item @(currentController == "Blog" ? "active" : "")">
+                    <a href="~/Blog/Index/" class="nav-link">Bloglar</a>
+                </li>
+
+                <li class="nav-item @(currentController == "Contact" ? "active" : "")">
+                    <a href="~/Contact/Index/" class="nav-link">İletişim</a>
+                </li>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item auth-item">
+                        <a href="~/Login/Logout/" class="nav-link" style="color: #e74c3c !important; font-weight: bold; font-size: 13px;">ÇIKIŞ YAP</a>
+                    </li>
+                }
+                else
+                {
+
+                    <li class="nav-item auth-item">
+                        <a href="~/Login/Index/" class="nav-login-btn">GİRİŞ YAP</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

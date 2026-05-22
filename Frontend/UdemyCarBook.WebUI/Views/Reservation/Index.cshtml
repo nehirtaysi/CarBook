@@ -1,0 +1,245 @@
+﻿@model CreateReservationDto
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    .step-content {
+        display: none;
+    }
+
+        .step-content.active {
+            display: block;
+        }
+
+    .wizard-steps {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .step-node {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #888;
+        border: 2px solid #ddd;
+    }
+
+        .step-node.active {
+            background: #1089ff;
+            color: white;
+            border-color: #1089ff;
+        }
+
+        .step-node.completed {
+            background: #28a745;
+            color: white;
+            border-color: #28a745;
+        }
+
+    .payment-card {
+        background: #fdfdfd;
+        border: 1px dashed #1089ff;
+        padding: 25px;
+        border-radius: 10px;
+    }
+</style>
+
+<div class="col-md-12 block-9 mb-md-5">
+    <form class="bg-light p-5 contact-form" method="post" id="wizardForm" style="width: 100%; max-width: 1100px; margin: auto; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0,0,0,0.1);">
+
+        <h3 class="alert alert-success text-center">Güvenli Araç Kiralama</h3>
+
+        <div class="wizard-steps">
+            <div class="step-node active" id="node1">1</div>
+            <div class="step-node" id="node2">2</div>
+            <div class="step-node" id="node3">3</div>
+        </div>
+
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="alert alert-danger text-center" style="font-weight: bold; border-radius: 8px;">
+                <i class="fas fa-exclamation-triangle"></i> @ViewBag.ErrorMessage
+            </div>
+        }
+
+        <div class="step-content active" id="step1">
+            <h5 class="mb-4 text-primary"><i class="fas fa-calendar-alt"></i> Adım 1: Araç ve Zaman</h5>
+            <div class="form-group">
+                <label style="font-weight: bold;">Seçilen Araç</label>
+                <input type="text" class="form-control" value="@ViewBag.CarModelName" readonly style="border: 2px solid #1089ff; font-weight: bold;">
+            </div>
+
+            <input type="hidden" asp-for="CarID" value="@ViewBag.v3">
+            <input type="hidden" id="DailyPrice" value="@ViewBag.DailyPrice">
+            <input type="hidden" asp-for="TotalPrice" id="TotalPriceInput">
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label>Alış Tarihi</label>
+                    <input type="datetime-local" asp-for="PickUpDate" class="form-control" value="@ViewBag.pickDateFull" required id="PickUpDate">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label>İade Tarihi</label>
+                    <input type="datetime-local" asp-for="DropOffDate" class="form-control" value="@ViewBag.offDateFull" required id="DropOffDate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label>Alış Lokasyonu</label>
+                    <select asp-for="PickUpLocationID" asp-items="@ViewBag.v" class="form-control"><option value="">Seçiniz</option></select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label>İade Lokasyonu</label>
+                    <select asp-for="DropOffLocationID" asp-items="@ViewBag.v" class="form-control"><option value="">Seçiniz</option></select>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary next-btn float-right py-3 px-5">Sonraki Adım <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="step-content" id="step2">
+            <h5 class="mb-4 text-primary"><i class="fas fa-user-check"></i> Adım 2: Sürücü Bilgileri</h5>
+            <div class="row">
+                <div class="col-md-6 form-group"><label>Ad</label><input type="text" asp-for="Name" class="form-control" required></div>
+                <div class="col-md-6 form-group"><label>Soyad</label><input type="text" asp-for="Surname" class="form-control" required></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group"><label>Ehliyet No</label><input asp-for="LicenseNumber" class="form-control" required></div>
+                <div class="col-md-6 form-group"><label>Yaş</label><input type="number" asp-for="Age" class="form-control" required></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group"><label>Email</label><input type="email" asp-for="Email" class="form-control" required></div>
+                <div class="col-md-6 form-group"><label>Telefon</label><input type="text" asp-for="Phone" class="form-control" required></div>
+            </div>
+            <button type="button" class="btn btn-secondary prev-btn py-3 px-5">Geri</button>
+            <button type="button" class="btn btn-primary next-btn float-right py-3 px-5">Ödeme Adımı <i class="fas fa-credit-card"></i></button>
+        </div>
+
+        <div class="step-content" id="step3">
+            <h5 class="mb-4 text-primary"><i class="fas fa-shield-alt"></i> Adım 3: Ödeme</h5>
+            <div class="payment-card mb-4">
+                <div class="form-group"><label>Kart Sahibi</label><input type="text" asp-for="CardHolderName" class="form-control text-uppercase" placeholder="AD SOYAD" required></div>
+                <div class="form-group">
+                    <label>Kart No (16 Hane)</label>
+                    <input type="text" asp-for="CardNumber" class="form-control" maxlength="16" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="0000000000000000" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label>Son Kullanma (AA/YY)</label>
+                        <input type="text" asp-for="ExpiryDate" id="ExpiryDate" class="form-control" placeholder="AA/YY" maxlength="5" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>CVC (3 Hane)</label>
+                        <input type="text" asp-for="CVC" class="form-control" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="000" required>
+                    </div>
+                </div>
+               
+            </div>
+            <button type="button" class="btn btn-secondary prev-btn py-3 px-5">Geri</button>
+            <button type="submit" class="btn btn-success float-right py-3 px-5" style="font-weight: bold;">Tamamla</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function calculatePrice() {
+        const pickUp = document.getElementById("PickUpDate");
+        const dropOff = document.getElementById("DropOffDate");
+        const dailyPriceHidden = document.getElementById("DailyPrice");
+
+        if (!pickUp.value || !dropOff.value) return;
+
+        const dailyPrice = parseFloat(dailyPriceHidden.value.replace(',', '.')) || 0;
+        const diffTime = new Date(dropOff.value) - new Date(pickUp.value);
+        const diffHours = diffTime / (1000 * 60 * 60);
+        let diffDays = Math.ceil(diffHours / 24);
+
+        if (diffDays <= 0) diffDays = 1;
+        const total = diffDays * dailyPrice;
+
+        document.getElementById("dayCount").innerText = diffDays;
+        const displayPrice = document.getElementById("displayPrice");
+        if(displayPrice) {
+            displayPrice.innerText = total.toLocaleString('tr-TR', { minimumFractionDigits: 2 });
+        }
+        document.getElementById("TotalPriceInput").value = total.toFixed(2).replace('.', ',');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const pickUp = document.getElementById("PickUpDate");
+        const dropOff = document.getElementById("DropOffDate");
+        const steps = document.querySelectorAll(".step-content"), nextBtns = document.querySelectorAll(".next-btn"),
+              prevBtns = document.querySelectorAll(".prev-btn"), nodes = document.querySelectorAll(".step-node");
+        let currentStep = 0;
+
+        const now = new Date();
+        const y = now.getFullYear(), m = String(now.getMonth() + 1).padStart(2, '0'), d = String(now.getDate()).padStart(2, '0');
+        const h = String(now.getHours()).padStart(2, '0'), mi = String(now.getMinutes()).padStart(2, '0');
+        pickUp.min = `${y}-${m}-${d}T${h}:${mi}`;
+
+        function syncDates() {
+            if (pickUp.value) {
+                const selectedDate = new Date(pickUp.value);
+                const minOffDate = new Date(selectedDate.getTime() + (26 * 60 * 60 * 1000));
+
+                const sy = minOffDate.getFullYear(), smo = String(minOffDate.getMonth() + 1).padStart(2, '0'), sd = String(minOffDate.getDate()).padStart(2, '0');
+                const sh = String(minOffDate.getHours()).padStart(2, '0'), smi = String(minOffDate.getMinutes()).padStart(2, '0');
+                const formattedMinOff = `${sy}-${smo}-${sd}T${sh}:${smi}`;
+
+                dropOff.min = pickUp.value;
+                if (!dropOff.value || new Date(dropOff.value) < minOffDate) {
+                    dropOff.value = formattedMinOff;
+                }
+                calculatePrice();
+            }
+        }
+
+        function updateStep() {
+            steps.forEach((s, i) => { s.classList.toggle("active", i === currentStep); nodes[i].classList.toggle("active", i === currentStep); nodes[i].classList.toggle("completed", i < currentStep); });
+            window.scrollTo(0, 0);
+        }
+
+        nextBtns.forEach(btn => btn.addEventListener("click", () => {
+            if(currentStep === 0 && (!pickUp.value || !dropOff.value)) {
+                Swal.fire({ icon: 'warning', title: 'Eksik Bilgi', text: 'Lütfen araç alış ve iade tarihlerini seçiniz.' });
+                return;
+            }
+            if(currentStep < 2) { currentStep++; updateStep(); }
+        }));
+
+        prevBtns.forEach(btn => btn.addEventListener("click", () => { if(currentStep > 0) { currentStep--; updateStep(); } }));
+
+        pickUp.addEventListener("change", syncDates);
+        dropOff.addEventListener("change", calculatePrice);
+
+        const expiryInput = document.getElementById("ExpiryDate");
+        if (expiryInput) {
+            expiryInput.addEventListener("input", e => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length >= 2) v = v.substring(0, 2) + "/" + v.substring(2, 4);
+                e.target.value = v;
+            });
+        }
+
+        document.getElementById("wizardForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            Swal.fire({ title: 'Banka Onayı', text: 'İşleniyor...', icon: 'info', showConfirmButton: false, timer: 2000, didOpen: () => Swal.showLoading() })
+            .then(() => { fetch(this.action, { method: 'POST', body: new FormData(this) }).then(r => r.ok ? Swal.fire({ title: 'Kiralama Başarılı!', icon: 'success' }).then(() => window.location.href="/Default/Index") : Swal.fire({ title: 'Hata!', icon: 'error' })); });
+        });
+
+        if (pickUp.value) calculatePrice();
+    });
+
+    window.onload = calculatePrice;
+</script>
