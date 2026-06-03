@@ -154,4 +154,4 @@ C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Presentation\UdemyCarBook.WebAp
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Presentation\UdemyCarBook.WebApi\obj\Debug\net8.0\UdemyCarBook.WebApi.genruntimeconfig.cache
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Presentation\UdemyCarBook.WebApi\obj\Debug\net8.0\ref\UdemyCarBook.WebApi.dll
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Presentation\UdemyCarBook.WebApi\obj\Debug\net8.0\UdemyCarBook.WebApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Presentation\UdemyCarBook.WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Presentation\UdemyCarBook.WebApi\obj\Debug\net8.0\UdemyCarBook.WebApi.sourcelink.json

@@ -18,7 +18,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.DashboardComponents
             var client = _httpClientFactory.CreateClient();
 
             #region İstatistik1
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Statistics/GetCarCount");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Statistics/GetCarCount");
             if (responseMessage.IsSuccessStatusCode)
             {
                 int v1 = random.Next(0, 101);
@@ -30,7 +30,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.DashboardComponents
             #endregion
 
             #region İstatistik2
-            var responseMessage2 = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Statistics/GetLocationCount");
+            var responseMessage2 = await client.GetAsync("http://nehircarbookapi.somee.com/api/Statistics/GetLocationCount");
             if (responseMessage2.IsSuccessStatusCode)
             {
                 int locationCountRandom = random.Next(0, 101);
@@ -42,7 +42,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.DashboardComponents
             #endregion
 
             #region İstatistik3
-            var responseMessage3 = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Statistics/GetBrandCount");
+            var responseMessage3 = await client.GetAsync("http://nehircarbookapi.somee.com/api/Statistics/GetBrandCount");
             if (responseMessage3.IsSuccessStatusCode)
             {
                 int brandCountRandom = random.Next(0, 101);
@@ -54,7 +54,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.DashboardComponents
             #endregion
 
             #region İstatistik4
-            var responseMessage4 = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Statistics/GetAvgRentPriceForDaily");
+            var responseMessage4 = await client.GetAsync("http://nehircarbookapi.somee.com/api/Statistics/GetAvgRentPriceForDaily");
             if (responseMessage4.IsSuccessStatusCode)
             {
                 int avgRentPriceForDailyRandom = random.Next(0, 101);

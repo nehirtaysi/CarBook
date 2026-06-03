@@ -20,7 +20,7 @@ namespace UdemyCarBook.WebUI.Controllers
             ViewBag.v = new List<SelectListItem>();
 
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Locations");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Locations");
 
             if (responseMessage.IsSuccessStatusCode)
             {

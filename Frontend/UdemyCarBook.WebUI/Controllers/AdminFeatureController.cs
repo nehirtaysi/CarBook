@@ -18,7 +18,7 @@ namespace UdemyCarBook.WebUI.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Features");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Features");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -39,7 +39,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createFeatureDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Features", stringContent);
+            var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Features", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -50,7 +50,7 @@ namespace UdemyCarBook.WebUI.Controllers
         public async Task<IActionResult> RemoveFeature(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Features/{id}");
+            var responseMessage = await client.DeleteAsync($"http://nehircarbookapi.somee.com/api/Features/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -62,7 +62,7 @@ namespace UdemyCarBook.WebUI.Controllers
         public async Task<IActionResult> UpdateFeature(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var resposenMessage = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Features/{id}");
+            var resposenMessage = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Features/{id}");
             if (resposenMessage.IsSuccessStatusCode)
             {
                 var jsonData = await resposenMessage.Content.ReadAsStringAsync();
@@ -78,7 +78,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateFeatureDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://nehirtaysi-001-site1.stempurl.com/api/Features/", stringContent);
+            var responseMessage = await client.PutAsync("http://nehircarbookapi.somee.com/api/Features/", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

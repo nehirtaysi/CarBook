@@ -32,7 +32,7 @@ namespace UdemyCarBook.Persistence.Repositories
 
         public async Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter)
         {
-            return await _context.Set<T>().FirstOrDefaultAsync();
+            return await _context.Set<T>().FirstOrDefaultAsync(filter);
         }
 
         public async Task<T> GetByIdAsync(int id)

@@ -21,7 +21,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
 
             var client = _httpClientFactory.CreateClient();
 
-            var responseMessage = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/TagClouds/GetTagCloudByBlogId?id=" + id);
+            var responseMessage = await client.GetAsync($"http://nehircarbookapi.somee.com/api/TagClouds/GetTagCloudByBlogId?id=" + id);
 
             if (responseMessage.IsSuccessStatusCode)
 

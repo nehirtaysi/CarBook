@@ -13,7 +13,7 @@ namespace UdemyCarBook.WebApi.Hubs
         public async Task SendCarCount()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Statistics/GetCarCount");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Statistics/GetCarCount");
             var value = await responseMessage.Content.ReadAsStringAsync();
             await Clients.All.SendAsync("ReceiveCarCount", value);
         }

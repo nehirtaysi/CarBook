@@ -19,7 +19,7 @@ namespace UdemyCarBook.WebUI.Controllers
             ViewBag.v1 = "Bloglar";
             ViewBag.v2 = "Yazarlarımızın Blogları";
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Blogs/GetAllBlogsWithAuthorList");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Blogs/GetAllBlogsWithAuthorList");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -35,7 +35,7 @@ namespace UdemyCarBook.WebUI.Controllers
             ViewBag.blogid = id;
 
             var client = _httpClientFactory.CreateClient();
-            var responseMessage2 = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Comments/CommentCountByBlog?id=" + id);
+            var responseMessage2 = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Comments/CommentCountByBlog?id=" + id);
             var jsonData2 = await responseMessage2.Content.ReadAsStringAsync();
             ViewBag.commentCount = jsonData2;
             return View();
@@ -54,7 +54,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createCommentDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Comments/CreateCommentWithMediator", stringContent);
+            var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Comments/CreateCommentWithMediator", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "Default");

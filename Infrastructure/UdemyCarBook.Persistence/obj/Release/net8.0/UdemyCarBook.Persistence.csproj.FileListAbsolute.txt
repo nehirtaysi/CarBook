@@ -17,3 +17,4 @@ C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Infrastructure\UdemyCarBook.Per
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Infrastructure\UdemyCarBook.Persistence\obj\Release\net8.0\UdemyCarBook.Persistence.pdb
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Infrastructure\UdemyCarBook.Persistence\obj\Release\net8.0\UdemyCarBook.Persistence.genruntimeconfig.cache
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Infrastructure\UdemyCarBook.Persistence\obj\Release\net8.0\ref\UdemyCarBook.Persistence.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Infrastructure\UdemyCarBook.Persistence\obj\Release\net8.0\UdemyCarBook.Persistence.sourcelink.json

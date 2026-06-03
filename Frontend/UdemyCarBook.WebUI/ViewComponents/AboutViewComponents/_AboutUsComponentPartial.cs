@@ -16,7 +16,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.AboutViewComponents
         public async Task< IViewComponentResult> InvokeAsync()
         {
             var client= _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Abouts");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Abouts");
             if (responseMessage.IsSuccessStatusCode)
             { 
                 var jsonData= await responseMessage.Content.ReadAsStringAsync();

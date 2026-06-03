@@ -18,7 +18,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Contacts");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Contacts");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

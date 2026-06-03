@@ -15,7 +15,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
         {
             ViewBag.blogid = id;
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Blogs/GetBlogByAuthorId?id=" + id);
+            var responseMessage = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Blogs/GetBlogByAuthorId?id=" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

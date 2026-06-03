@@ -19,7 +19,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Reservations");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Reservations");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -33,7 +33,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> CancelReservation(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Reservations/ChangeReservationStatusToCancel/{id}");
+            var responseMessage = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Reservations/ChangeReservationStatusToCancel/{id}");
 
             if (responseMessage.IsSuccessStatusCode)
             {

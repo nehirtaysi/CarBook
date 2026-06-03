@@ -21,7 +21,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Banners");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Banners");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -45,7 +45,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createBannerDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Banners", stringContent);
+            var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Banners", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "AdminBanner", new { area = "Admin" });
@@ -57,7 +57,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> RemoveBanner(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync("http://nehirtaysi-001-site1.stempurl.com/api/Banners?id=" + id);
+            var responseMessage = await client.DeleteAsync("http://nehircarbookapi.somee.com/api/Banners?id=" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "AdminBanner", new { area = "Admin" });
@@ -70,7 +70,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> UpdateBanner(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var resposenMessage = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Banners/{id}");
+            var resposenMessage = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Banners/{id}");
             if (resposenMessage.IsSuccessStatusCode)
             {
                 var jsonData = await resposenMessage.Content.ReadAsStringAsync();
@@ -87,7 +87,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateBannerDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://nehirtaysi-001-site1.stempurl.com/api/Banners/", stringContent);
+            var responseMessage = await client.PutAsync("http://nehircarbookapi.somee.com/api/Banners/", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "AdminBanner", new { area = "Admin" });

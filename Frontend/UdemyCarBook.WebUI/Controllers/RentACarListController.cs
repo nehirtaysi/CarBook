@@ -46,7 +46,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
 
             // 3. URL'i dinamik oluşturuyoruz. Tarih seçilmemişse (Haritadan gelinmişse) API'ye hatalı tarih yollamıyoruz.
-            var url = $"http://nehirtaysi-001-site1.stempurl.com/api/RentACars?locationID={finalLocationId}&available=true";
+            var url = $"http://nehircarbookapi.somee.com/api/RentACars?locationID={finalLocationId}&available=true";
 
             if (!string.IsNullOrEmpty(pickDateQuery) && !string.IsNullOrEmpty(offDateQuery))
             {

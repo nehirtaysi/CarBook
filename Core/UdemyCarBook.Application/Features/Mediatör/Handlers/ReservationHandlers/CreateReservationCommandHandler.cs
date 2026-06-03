@@ -86,7 +86,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.ReservationHandler
                 <p><b>İade Tarihi:</b> {request.DropOffDate:dd.MM.yyyy HH:mm}</p>
                 <hr>
                 <p>İptal işlemleriniz için aşağıdaki butonu kullanabilirsiniz:</p>
-<a href='http://nehirtaysi-001-site1.stempurl.com/api/Reservations/ChangeReservationStatusToCancel/{values.ReservationID}' 
+<a href='http://nehircarbookapi.somee.com/api/Reservations/ChangeReservationStatusToCancel/{values.ReservationID}' 
    style='display:inline-block; padding:10px 20px; background-color:#dc3545; color:#ffffff; text-decoration:none; border-radius:5px;'>
    Rezervasyonu İptal Et
 </a>

@@ -19,7 +19,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Blogs/GetAllBlogsWithAuthorList");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Blogs/GetAllBlogsWithAuthorList");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -33,7 +33,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> RemoveBlog(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync("http://nehirtaysi-001-site1.stempurl.com/api/Blogs?id=" + id);
+            var responseMessage = await client.DeleteAsync("http://nehircarbookapi.somee.com/api/Blogs?id=" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "AdminBlog", new { area = "Admin" });

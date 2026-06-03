@@ -25,7 +25,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createRegisterDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Registers", stringContent);
+            var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Registers", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "Login");

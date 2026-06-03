@@ -21,7 +21,7 @@ namespace UdemyCarBook.WebUI.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Cars/GetCarWithBrand");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Cars/GetCarWithBrand");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -35,7 +35,7 @@ namespace UdemyCarBook.WebUI.Controllers
         public async Task<IActionResult> CreateCar()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Brands");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Brands");
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
             var values = JsonConvert.DeserializeObject<List<ResultBrandDto>>(jsonData);
             List<SelectListItem> brandValues = (from x in values
@@ -54,7 +54,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createCarDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Cars", stringContent);
+            var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Cars", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -65,7 +65,7 @@ namespace UdemyCarBook.WebUI.Controllers
         public async Task<IActionResult> RemoveCar(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Cars/{id}");
+            var responseMessage = await client.DeleteAsync($"http://nehircarbookapi.somee.com/api/Cars/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -78,7 +78,7 @@ namespace UdemyCarBook.WebUI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
 
-            var responseMessage1 = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Brands");
+            var responseMessage1 = await client.GetAsync("http://nehircarbookapi.somee.com/api/Brands");
             var jsonData1 = await responseMessage1.Content.ReadAsStringAsync();
             var values1 = JsonConvert.DeserializeObject<List<ResultBrandDto>>(jsonData1);
             List<SelectListItem> brandValues = (from x in values1
@@ -89,7 +89,7 @@ namespace UdemyCarBook.WebUI.Controllers
                                                 }).ToList();
             ViewBag.BrandValues = brandValues;
 
-            var resposenMessage = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Cars/{id}");
+            var resposenMessage = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Cars/{id}");
             if (resposenMessage.IsSuccessStatusCode)
             {
                 var jsonData = await resposenMessage.Content.ReadAsStringAsync();
@@ -105,7 +105,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateCarDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://nehirtaysi-001-site1.stempurl.com/api/Cars/", stringContent);
+            var responseMessage = await client.PutAsync("http://nehircarbookapi.somee.com/api/Cars/", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

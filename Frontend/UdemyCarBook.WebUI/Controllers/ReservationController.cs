@@ -6,7 +6,7 @@ using UdemyCarBook.Dto.LocationDtos;
 using UdemyCarBook.Dto.ReservationDtos;
 using Microsoft.AspNetCore.Authorization;
 using System.Globalization;
-using System.Net.Http; 
+using System.Net.Http;
 
 namespace UdemyCarBook.WebUI.Controllers
 {
@@ -53,7 +53,7 @@ namespace UdemyCarBook.WebUI.Controllers
 
             var client = _httpClientFactory.CreateClient();
 
-            var responseCar = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Cars/{id}");
+            var responseCar = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Cars/{id}");
             if (responseCar.IsSuccessStatusCode)
             {
                 var jsonCar = await responseCar.Content.ReadAsStringAsync();
@@ -65,16 +65,19 @@ namespace UdemyCarBook.WebUI.Controllers
                 ViewBag.DailyPrice = dailyPriceValue.ToString("F2", CultureInfo.InvariantCulture);
             }
 
-            var responseLoc = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Locations");
-            var jsonLoc = await responseLoc.Content.ReadAsStringAsync();
-            var locations = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonLoc);
-
-            ViewBag.v = locations.Select(x => new SelectListItem
+            var responseLoc = await client.GetAsync("http://nehircarbookapi.somee.com/api/Locations");
+            if (responseLoc.IsSuccessStatusCode)
             {
-                Text = x.Name,
-                Value = x.LocationID.ToString(),
-                Selected = (ViewBag.locationID != null && x.LocationID.ToString() == ViewBag.locationID.ToString())
-            }).ToList();
+                var jsonLoc = await responseLoc.Content.ReadAsStringAsync();
+                var locations = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonLoc);
+
+                ViewBag.v = locations.Select(x => new SelectListItem
+                {
+                    Text = x.Name,
+                    Value = x.LocationID.ToString(),
+                    Selected = (ViewBag.locationID != null && x.LocationID.ToString() == ViewBag.locationID.ToString())
+                }).ToList();
+            }
 
             return View();
         }
@@ -86,7 +89,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var jsonData = JsonConvert.SerializeObject(createReservationDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Reservations", stringContent);
+            var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Reservations", stringContent);
 
             if (responseMessage.IsSuccessStatusCode)
             {
@@ -94,7 +97,34 @@ namespace UdemyCarBook.WebUI.Controllers
             }
 
             ViewBag.ErrorMessage = "Seçtiğiniz araç bu tarihler arasında müsait değildir.";
+            ViewBag.v1 = "Rezervasyon Formu";
             ViewBag.v3 = createReservationDto.CarID;
+
+            var responseCar = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Cars/{createReservationDto.CarID}");
+            if (responseCar.IsSuccessStatusCode)
+            {
+                var jsonCar = await responseCar.Content.ReadAsStringAsync();
+                var carValues = JsonConvert.DeserializeObject<dynamic>(jsonCar);
+                ViewBag.CarModelName = carValues.brand?.name + " " + carValues.model;
+
+                string rawPrice = (carValues.price ?? carValues.Price ?? carValues.dailyPrice ?? "0").ToString();
+                decimal dailyPriceValue = decimal.Parse(rawPrice, CultureInfo.InvariantCulture);
+                ViewBag.DailyPrice = dailyPriceValue.ToString("F2", CultureInfo.InvariantCulture);
+            }
+
+            // Lokasyonları tekrar çek
+            var responseLoc = await client.GetAsync("http://nehircarbookapi.somee.com/api/Locations");
+            if (responseLoc.IsSuccessStatusCode)
+            {
+                var jsonLoc = await responseLoc.Content.ReadAsStringAsync();
+                var locations = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonLoc);
+
+                ViewBag.v = locations.Select(x => new SelectListItem
+                {
+                    Text = x.Name,
+                    Value = x.LocationID.ToString()
+                }).ToList();
+            }
 
             return View(createReservationDto);
         }

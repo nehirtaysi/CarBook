@@ -192,7 +192,7 @@
 
             locations.forEach(function (loc) {
 
-                fetch(`http://nehirtaysi-001-site1.stempurl.com/api/RentACars?locationID=${loc.id}&available=true`)
+                fetch(`http://nehircarbookapi.somee.com/api/RentACars?locationID=${loc.id}&available=true`)
                     .then(response => {
                         if (!response.ok) throw new Error("API Hatası");
                         return response.json();

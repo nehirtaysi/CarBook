@@ -11,3 +11,4 @@ C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\De
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Debug\net8.0\UdemyCarBook.Domain.pdb
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Debug\net8.0\UdemyCarBook.Domain.genruntimeconfig.cache
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Debug\net8.0\ref\UdemyCarBook.Domain.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Domain\obj\Debug\net8.0\UdemyCarBook.Domain.sourcelink.json

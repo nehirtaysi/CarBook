@@ -15,7 +15,7 @@
                     <div class="card">
                         <script type="text/javascript">
                             $(document).ready(() => {
-                                var connection = new signalR.HubConnectionBuilder().withUrl("http://nehirtaysi-001-site1.stempurl.com/carhub").build();
+                                var connection = new signalR.HubConnectionBuilder().withUrl("http://nehircarbookapi.somee.com/api//carhub").build();
                                 $("#constatus").text(connection.state);
                                 connection.start().then(() => {
                                     $("#constatus").text(connection.state);

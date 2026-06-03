@@ -23,7 +23,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.DefaultViewComponents
 
             try
             {
-                var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Banners");
+                var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Banners");
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     var jsonData = await responseMessage.Content.ReadAsStringAsync();

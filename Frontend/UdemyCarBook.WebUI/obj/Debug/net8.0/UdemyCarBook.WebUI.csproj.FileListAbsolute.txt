@@ -245,10 +245,10 @@ C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\UdemyCar.3FF3DB25.Up2Date
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\UdemyCarBook.WebUI.dll
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\refint\UdemyCarBook.WebUI.dll
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\UdemyCarBook.WebUI.pdb
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\UdemyCarBook.WebUI.genruntimeconfig.cache
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\ref\UdemyCarBook.WebUI.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Frontend\UdemyCarBook.WebUI\obj\Debug\net8.0\UdemyCarBook.WebUI.sourcelink.json

@@ -1,16 +1,15 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Hizmetler burada tanýmlanýyor
 builder.Services.AddControllersWithViews();
 
-// API adresi tanýmlamasý
 builder.Services.AddHttpClient("CarBookClient", client =>
 {
-    // API'nin canlýdaki ana adresini buraya yaz
-    client.BaseAddress = new Uri("http://nehirtaysi-001-site1.stempurl.com/");
+    client.BaseAddress = new Uri("http://nehircarbookapi.somee.com/api/");
 });
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -27,13 +26,15 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 var app = builder.Build();
 
-// app.UsePathBase("/ui");  <-- BU SATIRI SÝLDÝK!
-
-if (!app.Environment.IsDevelopment())
+var supportedCultures = new[] { new CultureInfo("tr-TR") };
+app.UseRequestLocalization(new RequestLocalizationOptions
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-}
+    DefaultRequestCulture = new RequestCulture("tr-TR"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
+
+app.UseDeveloperExceptionPage();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -43,7 +44,6 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Route tanýmlamalarý
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Default}/{action=Index}/{id?}");

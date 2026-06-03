@@ -53,7 +53,7 @@ namespace UdemyCarBook.WebUI.Controllers
             var jsonData = JsonConvert.SerializeObject(model);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Testimonials", content);
+            var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Testimonials", content);
 
             return RedirectToAction("Index", "Default");
         }

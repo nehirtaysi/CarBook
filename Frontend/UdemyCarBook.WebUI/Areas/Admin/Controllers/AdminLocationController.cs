@@ -13,6 +13,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
     public class AdminLocationController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
+
         public AdminLocationController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
@@ -26,7 +27,8 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
             {
                 var client = _httpClientFactory.CreateClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/Locations");
+
+                var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/Locations");
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -34,8 +36,8 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
                     return View(values);
                 }
             }
-            return View();
-
+            // HATA ÖNLEME: API'den veri gelmezse form çökmesin diye boş liste gönderiyoruz
+            return View(new List<ResultLocationDto>());
         }
 
         [HttpGet]
@@ -49,13 +51,20 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         [Route("CreateLocation")]
         public async Task<IActionResult> CreateLocation(CreateLocationDto createLocationDto)
         {
-            var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(createLocationDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Locations", stringContent);
-            if (responseMessage.IsSuccessStatusCode)
+            var token = User.Claims.FirstOrDefault(x => x.Type == "carbooktoken")?.Value;
+            if (token != null)
             {
-                return RedirectToAction("Index", "AdminLocation", new { area = "Admin" });
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                var jsonData = JsonConvert.SerializeObject(createLocationDto);
+                StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Locations", stringContent);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index", "AdminLocation", new { area = "Admin" });
+                }
             }
             return View();
         }
@@ -63,11 +72,19 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         [Route("RemoveLocation/{id}")]
         public async Task<IActionResult> RemoveLocation(int id)
         {
-            var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync("http://nehirtaysi-001-site1.stempurl.com/api/Locations?id=" + id);
-            if (responseMessage.IsSuccessStatusCode)
+            var token = User.Claims.FirstOrDefault(x => x.Type == "carbooktoken")?.Value;
+            if (token != null)
             {
-                return RedirectToAction("Index", "AdminLocation", new { area = "Admin" });
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                // API'nin silme formatına uygun olarak ID'yi doğrudan URL sonuna ekledik
+                var responseMessage = await client.DeleteAsync($"http://nehircarbookapi.somee.com/api/Locations/{id}");
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index", "AdminLocation", new { area = "Admin" });
+                }
             }
             return View();
         }
@@ -76,13 +93,19 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         [Route("UpdateLocation/{id}")]
         public async Task<IActionResult> UpdateLocation(int id)
         {
-            var client = _httpClientFactory.CreateClient();
-            var resposenMessage = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/Locations/{id}");
-            if (resposenMessage.IsSuccessStatusCode)
+            var token = User.Claims.FirstOrDefault(x => x.Type == "carbooktoken")?.Value;
+            if (token != null)
             {
-                var jsonData = await resposenMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<UpdateLocationDto>(jsonData);
-                return View(values);
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                var resposenMessage = await client.GetAsync($"http://nehircarbookapi.somee.com/api/Locations/{id}");
+                if (resposenMessage.IsSuccessStatusCode)
+                {
+                    var jsonData = await resposenMessage.Content.ReadAsStringAsync();
+                    var values = JsonConvert.DeserializeObject<UpdateLocationDto>(jsonData);
+                    return View(values);
+                }
             }
             return View();
         }
@@ -91,13 +114,20 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         [Route("UpdateLocation/{id}")]
         public async Task<IActionResult> UpdateLocation(UpdateLocationDto updateLocationDto)
         {
-            var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(updateLocationDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://nehirtaysi-001-site1.stempurl.com/api/Locations/", stringContent);
-            if (responseMessage.IsSuccessStatusCode)
+            var token = User.Claims.FirstOrDefault(x => x.Type == "carbooktoken")?.Value;
+            if (token != null)
             {
-                return RedirectToAction("Index", "AdminLocation", new { area = "Admin" });
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                var jsonData = JsonConvert.SerializeObject(updateLocationDto);
+                StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                var responseMessage = await client.PutAsync("http://nehircarbookapi.somee.com/api/Locations", stringContent);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index", "AdminLocation", new { area = "Admin" });
+                }
             }
             return View();
         }

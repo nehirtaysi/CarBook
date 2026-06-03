@@ -29,7 +29,7 @@ namespace UdemyCarBook.WebUI.Controllers
             createContactDto.SendDate = DateTime.Now;
             var jsonData = JsonConvert.SerializeObject(createContactDto);
             StringContent stringcontent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://nehirtaysi-001-site1.stempurl.com/api/Contacts", stringcontent);
+            var responseMessage = await client.PostAsync("http://nehircarbookapi.somee.com/api/Contacts", stringcontent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "Default");

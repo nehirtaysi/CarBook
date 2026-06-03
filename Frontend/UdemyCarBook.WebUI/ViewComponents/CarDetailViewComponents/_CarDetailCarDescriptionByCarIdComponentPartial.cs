@@ -17,7 +17,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.CarDetailViewComponents
         {
             ViewBag.carid = id;
             var client = _httpClientFactory.CreateClient();
-            var resposenMessage = await client.GetAsync($"http://nehirtaysi-001-site1.stempurl.com/api/CarDescriptions?id=" + id);
+            var resposenMessage = await client.GetAsync($"http://nehircarbookapi.somee.com/api/CarDescriptions?id=" + id);
             if (resposenMessage.IsSuccessStatusCode)
             {
                 var jsonData = await resposenMessage.Content.ReadAsStringAsync();

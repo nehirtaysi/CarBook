@@ -16,7 +16,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.DashboardComponents
             ViewBag.v1 = "Paketler";
             ViewBag.v2 = "Araç Fiyat Paketleri";
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://nehirtaysi-001-site1.stempurl.com/api/CarPricings/GetCarPricingWithTimePeriodList");
+            var responseMessage = await client.GetAsync("http://nehircarbookapi.somee.com/api/CarPricings/GetCarPricingWithTimePeriodList");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

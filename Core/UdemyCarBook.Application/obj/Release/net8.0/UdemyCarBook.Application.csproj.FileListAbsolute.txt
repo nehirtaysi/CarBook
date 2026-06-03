@@ -13,3 +13,4 @@ C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Application\o
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Application\obj\Release\net8.0\refint\UdemyCarBook.Application.dll
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Application\obj\Release\net8.0\UdemyCarBook.Application.pdb
 C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Application\obj\Release\net8.0\ref\UdemyCarBook.Application.dll
+C:\Users\admin\Desktop\NehirStajyer\UdemyCarBook\Core\UdemyCarBook.Application\obj\Release\net8.0\UdemyCarBook.Application.sourcelink.json
